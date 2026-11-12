@@ -1,0 +1,16 @@
+name: CinematicDeath
+version: '${project.version}'
+main: dev.cinematicdeath.CinematicDeath
+api-version: '1.21'
+description: Cinematic death, 10 minute void wait, cinematic revive.
+commands:
+  cdeath:
+    description: CinematicDeath admin command
+    usage: /cdeath <reload|setvoid|setrespawn|test|revive|status>
+    permission: cinematicdeath.admin
+permissions:
+  cinematicdeath.admin:
+    default: op
+  cinematicdeath.bypass:
+    description: Mati normal (tanpa sinematik)
+    default: false

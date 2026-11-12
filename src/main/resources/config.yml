@@ -1,0 +1,54 @@
+# Lama menunggu di void (menit)
+wait-minutes: 10
+
+# Lokasi void (atur pakai /cdeath setvoid sambil berdiri di tempat yang kamu mau)
+# Pastikan ada platform di bawahnya.
+void:
+  world: world
+  x: 0.5
+  y: 200.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+# Lokasi bangkit.
+# mode: bed   -> pakai bed/respawn anchor player, kalau tidak ada pakai spawn world
+# mode: fixed -> selalu di lokasi 'fixed' di bawah (atur pakai /cdeath setrespawn)
+respawn:
+  mode: bed
+  fixed:
+    world: world
+    x: 0.5
+    y: 64.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+# true = item & XP tetap di player. false = jatuh di tempat mati.
+keep-inventory: false
+
+sounds: true
+broadcast-death: true
+
+death:
+  orbit-seconds: 8     # lama kamera muter + player naik
+revive:
+  seconds: 8           # lama animasi turun
+
+ghost:
+  chat: false          # boleh chat saat di void?
+  allowed-commands:
+    - msg
+    - r
+    - help
+
+# Semua teks pakai format MiniMessage
+messages:
+  death-title: "<bold><red>DEATH"
+  death-subtitle: "<gray>Bangkit dalam <white>{minutes} menit"
+  revive-title: "<bold><gradient:#3ee0ff:#7aa2ff>B A N G K I T"
+  revive-subtitle: "<yellow>Selamat datang kembali"
+  revive-actionbar: "<aqua>KEMBALI KE DUNIA"
+  death-broadcast: "<red>☠ <white>{player} <gray>telah gugur dan jiwanya terbawa ke kehampaan."
+  void-bar: "<gradient:#8a7dff:#6ee7ff>Jiwa Terkurung</gradient> <gray>— bangkit dalam <white>{time}"
+  ghost-blocked: "<red>Kamu tidak bisa melakukan itu saat jiwamu terkurung."
